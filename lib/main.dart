@@ -1,14 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:onlinemeetingapp/Home/homepage.dart';
-void main(){
+
+void main() {
   runApp(const OnlineMeetingApp());
 }
+
 class OnlineMeetingApp extends StatelessWidget {
   const OnlineMeetingApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(255, 158, 225, 199),
+          // ···
+        ),
+      ),
+      title: "OnlineMeetingApp",
+      debugShowCheckedModeBanner: false,
+      // theme: ThemeData(
+      //   brightness: Brightness.dark,
+      //   primarySwatch: Colors.amber,
+      // ),
       home: Homepage(),
     );
   }
