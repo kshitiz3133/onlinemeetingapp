@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onlinemeetingapp/Home/homepage.dart';
+import 'app.dart';
 void main(){
   runApp(const OnlineMeetingApp());
 }
@@ -9,7 +9,7 @@ class OnlineMeetingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Homepage(),
+      home: App(),
     );
   }
 }
