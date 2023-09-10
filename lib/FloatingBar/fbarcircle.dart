@@ -34,7 +34,7 @@ class Fbarcircle extends StatelessWidget {
               width: 75,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.deepPurple[200],
+                color: Color.fromARGB(255, 111, 201, 168),
               ),
             ),
           ),

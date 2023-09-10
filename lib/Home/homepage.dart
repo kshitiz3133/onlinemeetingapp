@@ -203,29 +203,3 @@ class _HomepageState extends State<Homepage> {
   }
 }
 
-
-
-      // child: Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Column(
-        //       children: [
-        //         Container(
-        //           height: 200,
-        //           width: 300,
-        //           color: Colors.deepPurple[50],
-        //         ),
-        //         Container(
-        //           height: 200,
-        //           width: 300,
-        //           color: Colors.deepPurple[200],
-        //         ),
-        //         Container(
-        //           height: 200,
-        //           width: 300,
-        //           color: Colors.deepPurple[100],
-        //         ),
-        //       ],
-        //     ),
-        //   ],
-        // ),

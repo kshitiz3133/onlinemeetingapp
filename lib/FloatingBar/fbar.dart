@@ -10,11 +10,11 @@ class Fbar extends StatelessWidget {
         right: 30,
         bottom: 25,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
           child: Container(
-            height: 80,
+            height: 70,
             width: 1,
-            color: Colors.black,
+            color: Color.fromARGB(255, 111, 201, 168),
           ),
         ),
       ),

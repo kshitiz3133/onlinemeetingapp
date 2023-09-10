@@ -23,10 +23,6 @@ class OnlineMeetingApp extends StatelessWidget {
       //   brightness: Brightness.dark,
       //   primarySwatch: Colors.amber,
       // ),
-      home: Homepage(),
-    return const MaterialApp(
-      // calls widget tree App
-      home: App(),
-    );
+      home: App());
   }
 }
