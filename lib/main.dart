@@ -9,6 +9,7 @@ class OnlineMeetingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      // calls widget tree App
       home: App(),
     );
   }

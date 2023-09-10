@@ -9,7 +9,9 @@ class App extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          // call homepage at the start
           Homepage(),
+          // floatingbar at the top of stack(at the top of all pages)
           Fbarcall()
         ],
       ),
