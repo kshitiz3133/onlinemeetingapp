@@ -51,148 +51,152 @@ class _HomepageState extends State<Homepage> {
           ),
         ],
       ),
-      drawer: Drawer(
-        // shadowColor: Colors.black,
-        backgroundColor: Color.fromARGB(255, 158, 225, 199),
-        child: ListView(
-          padding: EdgeInsets.all(0.0),
-          children: [
-            ListTile(
-              leading: Icon(
-                Icons.library_books,
-                color: Colors.black,
+      drawer: SafeArea(
+        child: Drawer(
+          // shadowColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 158, 225, 199),
+          child: ListView(
+            padding: EdgeInsets.all(0.0),
+            children: [
+              ListTile(
+                leading: Icon(
+                  Icons.library_books,
+                  color: Colors.black,
+                ),
+                title: Text("Logs"),
+                onTap: () {},
               ),
-              title: Text("Logs"),
-              onTap: () {},
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                CupertinoIcons.bell_solid,
-                color: Colors.black,
+              Divider(),
+              ListTile(
+                leading: Icon(
+                  CupertinoIcons.bell_solid,
+                  color: Colors.black,
+                ),
+                title: Text("Notifications"),
+                onTap: () {},
               ),
-              title: Text("Notifications"),
-              onTap: () {},
-            ),
-            Divider(),
-          ],
+              Divider(),
+            ],
+          ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Column(
-          children: <Widget>[
-            const Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'Upcoming Meetings',
-                // style: TextStyle(fontWeight: FontWeight.bold),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            children: <Widget>[
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Upcoming Meetings',
+                  // style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      color: Color.fromARGB(255, 158, 225, 199),
                     ),
-                    color: Color.fromARGB(255, 158, 225, 199),
-                  ),
-                  child: ListView.builder(
-                    itemCount: upcomingMeetings.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      final meeting = upcomingMeetings[index];
-                      return Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              MediaQuery.of(context).size.height * 0.6),
-                        ),
-                        elevation: 10.0,
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 5.0, vertical: 8.0),
-                        child: ListTile(
-                          title: Text(meeting.title),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('DATE: ${meeting.date}'),
-                              Text('Time: ${meeting.time}'),
-                            ],
+                    child: ListView.builder(
+                      itemCount: upcomingMeetings.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final meeting = upcomingMeetings[index];
+                        return Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                MediaQuery.of(context).size.height * 0.6),
                           ),
-                          trailing: InkWell(
-                            onTap: () {},
-                            child: Icon(
-                              Icons.arrow_forward,
-                              size: MediaQuery.of(context).size.width * 0.06,
+                          elevation: 10.0,
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5.0, vertical: 8.0),
+                          child: ListTile(
+                            title: Text(meeting.title),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('DATE: ${meeting.date}'),
+                                Text('Time: ${meeting.time}'),
+                              ],
+                            ),
+                            trailing: InkWell(
+                              onTap: () {},
+                              child: Icon(
+                                Icons.arrow_forward,
+                                size: MediaQuery.of(context).size.width * 0.06,
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
-            ),
-            // SizedBox(
-            //   height: 20,
-            // ),
-            const Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'Past Meetings',
-                // style: TextStyle(fontWeight: FontWeight.bold),
+              // SizedBox(
+              //   height: 20,
+              // ),
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Past Meetings',
+                  // style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      color: Color.fromARGB(255, 158, 225, 199),
                     ),
-                    color: Color.fromARGB(255, 158, 225, 199),
-                  ),
-                  child: ListView.builder(
-                    itemCount: pastMeetings.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      final meeting = pastMeetings[index];
-                      return Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              MediaQuery.of(context).size.height * 0.6),
-                          //set border radius more than 50% of height and width to make circle
-                        ),
-                        elevation: 10.0,
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 5.0, vertical: 8.0),
-                        child: ListTile(
-                          title: Text(meeting.title),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('DATE: ${meeting.date}'),
-                              Text('Time: ${meeting.time}'),
-                            ],
+                    child: ListView.builder(
+                      itemCount: pastMeetings.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final meeting = pastMeetings[index];
+                        return Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                MediaQuery.of(context).size.height * 0.6),
+                            //set border radius more than 50% of height and width to make circle
                           ),
-                          trailing: InkWell(
-                            onTap: () {},
-                            child: Icon(
-                              Icons.arrow_forward,
-                              size: MediaQuery.of(context).size.width * 0.06,
+                          elevation: 10.0,
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5.0, vertical: 8.0),
+                          child: ListTile(
+                            title: Text(meeting.title),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('DATE: ${meeting.date}'),
+                                Text('Time: ${meeting.time}'),
+                              ],
+                            ),
+                            trailing: InkWell(
+                              onTap: () {},
+                              child: Icon(
+                                Icons.arrow_forward,
+                                size: MediaQuery.of(context).size.width * 0.06,
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

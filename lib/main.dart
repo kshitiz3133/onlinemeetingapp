@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlinemeetingapp/Home/homepage.dart';
-
-void main() {
+import 'app.dart';
+void main(){
   runApp(const OnlineMeetingApp());
 }
 
@@ -24,6 +24,9 @@ class OnlineMeetingApp extends StatelessWidget {
       //   primarySwatch: Colors.amber,
       // ),
       home: Homepage(),
+    return const MaterialApp(
+      // calls widget tree App
+      home: App(),
     );
   }
 }
