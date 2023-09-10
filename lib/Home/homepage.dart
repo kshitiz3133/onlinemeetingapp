@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onlinemeetingapp/Login/loginpage.dart';
 
 class Meeting {
   final String title;
@@ -43,7 +44,9 @@ class _HomepageState extends State<Homepage> {
         actions: <Widget>[
           IconButton(
             iconSize: MediaQuery.of(context).size.width * 0.08,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+            },
             icon: const Icon(
               Icons.person,
               color: Colors.black,

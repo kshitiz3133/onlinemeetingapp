@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onlinemeetingapp/Home/homepage.dart';
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -36,6 +37,7 @@ class Login extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   TextButton(onPressed: (){}, child: Text("Login")),
+                  TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Homepage()));}, child: Text("Cancel")),
                   SizedBox(height: 40),
                   Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [Text("Forget Password?"),Text("Sign Up")],)
                 ],
