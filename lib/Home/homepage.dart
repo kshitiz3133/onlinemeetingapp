@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onlinemeetingapp/Log%20Pages/log.dart';
 import 'package:onlinemeetingapp/Login/loginpage.dart';
+import 'package:onlinemeetingapp/Reminders/reminder.dart';
 
 class Meeting {
   final String title;
@@ -67,7 +69,9 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.black,
                 ),
                 title: Text("Logs"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Log()));
+                },
               ),
               Divider(),
               ListTile(
@@ -76,7 +80,9 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.black,
                 ),
                 title: Text("Notifications"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Reminder()));
+                },
               ),
               Divider(),
             ],
