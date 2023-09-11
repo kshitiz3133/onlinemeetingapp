@@ -23,6 +23,7 @@ class _AppState extends State<App> {
         children: [
           //Homepage and settings page
           PageView(
+              physics: NeverScrollableScrollPhysics(),
             controller: lul,
             children: [
               Homepage(),
